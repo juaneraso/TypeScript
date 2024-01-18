@@ -14,16 +14,23 @@ console.log(mostrarLongitud("5500"));
 //// Examples interfaces 
 
 interface Mario {
-    company: string,
+    company: 'Nintendo',
     nombre : string,
     saltar: () => void 
 }
 
 interface Sonic{
-  company: string,
+  company: 'Sega',
   nombre : string,
   correr : ()=> void
 }
 
-type Persona = Mario | Sonic 
+type Personaje = Mario | Sonic 
 
+function jugar (personaje:Personaje){     
+   if(personaje.company === 'Nintendo'){       
+       personaje.saltar() // Este es Mario
+       return
+   }
+   personaje.correr
+}
