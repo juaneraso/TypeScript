@@ -1,3 +1,4 @@
+
 // class Avenger{
 //    readonly name : string 
 //    powerScore: number
@@ -23,74 +24,74 @@
 
 // }
 
-// const vengador = new Avenger('spiderman',80);
+// const vengador2 = new Avenger('spiderman',80);
 
-// vengador.name = 'Hulk';
+// // vengador2.name = 'Hulk';
 
-// console.log(vengador);
-
-
+// console.log(vengador2);
 
 
 
-////// Con interfaces 
 
- interface Avenger {
-    name:string;
-    powerScore: number ;
-    wonBattles : number  ;
-    age?: number ;
-    battle: (enemy: Avenger, win: boolean) =>void;
 
- }
+// //// Con interfaces 
 
-class AvengerClass implements Avenger{
+//  interface Avenger {
+//     name:string;
+//     powerScore: number ;
+//     wonBattles : number  ;
+//     age?: number ;
+//     battle: (enemy: Avenger, win: boolean) =>void;
 
-     name:string;
-     powerScore: number;
-     wonBattles: number;    
-     age :number=20;
+//  }
+
+// class AvengerClass implements Avenger{
+
+//      name:string;
+//      powerScore: number;
+//      wonBattles: number;    
+//      age :number=20;
  
-   constructor ( name:string, powerScore:number,wonBattles:number){
-     this.name = name ;
-     this.powerScore = powerScore;
-     this.wonBattles = wonBattles;
-   }
+//    constructor ( name:string, powerScore:number,wonBattles:number){
+//      this.name = name ;
+//      this.powerScore = powerScore;
+//      this.wonBattles = wonBattles;
+//    }
  
-   get fullName(){
-     return `${this.name}, de poder ${this.powerScore}`
-   }
+//    get fullName(){
+//      return `${this.name}, de poder ${this.powerScore}`
+//    }
    
-  //  set wonBattles2 (newBatle : number){
+//   //  set wonBattles2 (newBatle : number){
 
-  //     this.wonBattles = newBatle;
-  //  }
+//   //     this.wonBattles = newBatle;
+//   //  }
     
-    battle (enemy:Avenger , win:boolean ): void {
-         if(win){
-            this.wonBattles ++
-            this.powerScore += 5
-         } else {
-            this.powerScore -= 5
-         }
+//     battle (enemy:Avenger , win:boolean ): void {
+//          if(win){
+//             this.wonBattles ++
+//             this.powerScore += 5
+//          } else {
+//             this.powerScore -= 5
+//          }
 
-    }
+//     }
  
-   set power(newPower: number){
-     if(newPower <= 100){
-         this.powerScore = newPower
-     }else {
-         throw new Error('Power score cannot be more than 100')
-     }
+//    set power(newPower: number){
+//      if(newPower <= 100){
+//          this.powerScore = newPower
+//      }else {
+//          throw new Error('Power score cannot be more than 100')
+//      }
  
-   }
+//    }
  
- }
+//  }
  
- const vengador = new AvengerClass('spiderman',300,3);
+//  const vengador = new AvengerClass('spiderman',300,3);
  
- // vengador.name = 'Hulk';
+//  // vengador.name = 'Hulk';
  
-  vengador.age = 40;
- console.log(vengador);
+//   vengador.age = 40;
+//  console.log(vengador);
  
